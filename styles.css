@@ -29,24 +29,39 @@ nav ul li{
     border-radius:8px;
     background-color:#f5f5f5;
     list-style-type:none;
-    padding:5px;
+    /* padding:5px; */
 }
 nav ul li a {
     text-decoration:none;
     color:black;
-}
-nav ul li a span{
-    font-size:1vw;
-    text-align:center;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-around;
+    align-items:center;
+    gap:0.2px;
+    margin-top:5px;
+    margin-bottom:5px;
+    font-size:12px;
+
 }
 .nav-image{
     height:2vw;
     width:2vw;
 }
 nav ul li:hover{
-    filter:invert(100%);
     background-color:#1E87FC;
     cursor:pointer;
+}
+nav ul li:hover a{
+    color:white;
+}
+
+nav ul li:hover .nav-image{
+    filter:brightness(0) invert(1);
+
+}
+nav ul li:active{
+    background-color:black;
 }
 
                                                             /* Profile Section */
@@ -193,5 +208,73 @@ nav ul li:hover{
     position:absolute;
     top:15vh;
     left:25vw;
-    overflow:hidden;
+    overflow:auto;
+    padding:3%;
+}
+.about-content{
+    height:25vh;
+    width:100%;
+    /* border:2px solid black; */
+    padding:1.1%;
+
+}
+.about-content hr{
+    height:2.5px;
+    width:20%;
+    background-color:#1E87FC;
+    position:relative;
+    left:12%;
+    bottom:10%;
+    border:none;
+    border-radius:10px;
+}
+.about-content-domain{
+    height:45vh;
+    width:100%;
+    /* border:2px solid black; */
+    padding:0%;
+    margin-top:10px;
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    flex-wrap:wrap;
+    
+}
+.about-content-domain section{
+    height:20vh;
+    width:45%;
+    border:0.1px solid lightgray;
+    border-radius:10px;
+    padding:5px;
+    background-color:#f6f1f4;
+
+}
+.about-content-domain-image-container{
+    height:3vw;
+    width:3vw;
+    /* border:2px solid black; */
+}
+.about-content-domain-image{
+    height:2.5vw;
+    width:2.5vw;
+
+}
+.about-content-domain-text{
+    height:18vh;
+    width:18vw;
+    /* border:2px solid black; */
+    position:relative;
+    left:3vw;
+    bottom:34%;
+    padding:5px;
+}
+.about-content-domain-text p{
+    margin-top:10px;
+}
+.about-content-domain-text h2{
+    font-size:20px;
+}
+#web-dev,#photography{
+    background-color:#eaf4fc;
+
 }
